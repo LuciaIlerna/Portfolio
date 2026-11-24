@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Contacto</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header id="cabecera-principal">
+        <div class="logo">José Luis & Lucía</div>
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="index.html">Proyectos</a></li>
+                <li><a href="aboutme.html">Sobre mí</a></li>
+                <li><a href="skills.html">Habilidades</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor">
+            <header class="cabecera-seccion">
+                <span class="etiqueta-destacada">Hablemos</span>
+                <h1>Contacto</h1>
+                <p>¿Tienes una pregunta o quieres hablar sobre alguno de mis proyectos? Puedes escribirme.</p>
+            </header>
+
+            <div class="grid-contacto">
+                <div>
+                    <h2>Escríbeme</h2>
+                    <p>La forma más directa de contactar conmigo es por correo electrónico:</p>
+                    <p><a href="mailto:joseluissanchezz@alumnos.alborfp.com">joseluissanchezz@alumnos.alborfp.com</a></p>
+                    <p>También puedes encontrarme en <a href="https://github.com" target="_blank">GitHub</a>.</p>
+                </div>
+
+                <form action="mailto:joseluissanchezz@alumnos.alborfp.com" method="post" enctype="text/plain">
+                    <div class="campo-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
+                    </div>
+                    <div class="campo-formulario">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primario">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <p>2026 — José Luis</p>
+        <div class="enlaces-sociales">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="mailto:joseluissanchezz@alumnos.alborfp.com">Correo</a>
+        </div>
+    </footer>
+
+</body>
+</html>
