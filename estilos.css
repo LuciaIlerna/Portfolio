@@ -1,233 +1,178 @@
-/* GUÍA DE ESTILO*/
+/* Guía de estilo */
 
-:root {
-    /* Paleta de colores */
-    --color-primario: #5E3BEE;
-    --color-primario-oscuro: #4628c4;
-    --color-fondo: #FFFFFF;
-    --color-fondo-suave: #F5FCFF;
-    --color-texto: #282938;
-    --color-texto-secundario: #1C1E53;
-    --color-borde: #E2E8F0;
-
-    /* Tipografía */
-    --fuente-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    /* Espaciados y bordes */
-    --espacio-seccion: 60px;
-    --radio-borde: 8px;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* - Fondo: #ffffff (Blanco)
+   - Texto principal: #222222 (Gris oscuro)
+   - Color de acento: #2980b9 (Azul elegante)
+   - Fondos y tablas: #f4f4f4 (Gris claro) */
 
 body {
-    font-family: var(--fuente-principal);
-    color: var(--color-texto);
-    background-color: var(--color-fondo);
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #222222;
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
+}
+
+/* Parte del header */
+
+header {
+    background-color: #ffffff;
+    border-bottom: 2px solid #2980b9;
+    padding: 20px 0;
+}
+
+/* Selector descendiente */
+
+header nav ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Selector hijo directo */
+
+header nav ul > li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Selector agrupado para los enlaces */
+
+header nav ul li a,
+main p a {
+    color: #222222;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #2980b9;
+}
+
+/* Parte del main */
+
+main {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Selector agrupado para títulos principales */
+
+h1, h2, h3 {
+    color: #222222;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 32px;
+    border-left: 8px solid #2980b9;
+    padding-left: 15px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+/* Selectores de atributo */
+
+a[href^="https"] {
+    background-color: #2980b9;
+    color: #222222;
+    padding: 2px 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Selector por ID */
+
+#perfilDestacado {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+/* Selector por clase */
+
+.tarjetaHabilidad {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2980b9;
+}
+
+.fotos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.fotos figure {
+    width: 45%;
+    margin: 0 0 20px 0;
+}
+
+/* Imágenes y tablas */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #222222;
+    color: #ffffff;
+}
+
+figure {
+    margin: 30px 0;
+    text-align: center;
 }
 
 img {
     max-width: 100%;
-    display: block;
+    height: auto;
+    border: 4px solid #f4f4f4;
 }
 
-/* Selectores agrupados */
-h1, h2, h3 {
-    color: var(--color-texto-secundario);
-    line-height: 1.2;
-}
-
-.tarjeta-proyecto, .tarjeta-skill, .item-formacion {
-    background-color: var(--color-fondo-suave);
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-borde);
-    padding: 20px;
-}
-
-/* Selectores de ID */
-#cabecera-principal {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    border-bottom: 1px solid var(--color-borde);
-}
-
-#footer {
-    text-align: center;
-    padding: 30px 5%;
-    background-color: var(--color-fondo-suave);
-    margin-top: var(--espacio-seccion);
-}
-
-/* Selector hijo directo */
-.menu-nav > ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
-}
-
-/* Selectores descendientes */
-.menu-nav a {
-    text-decoration: none;
-    color: var(--color-texto);
-    font-weight: 500;
-}
-
-.menu-nav a.activo {
-    color: var(--color-primario);
-    font-weight: 700;
-}
-
-.contenido-tarjeta h3 {
-    margin: 12px 0 8px 0;
-}
-
-/* Enlaces */
-a[target="_blank"] {
-    color: var(--color-primario);
-    font-weight: 600;
-    text-decoration: none;
-}
-
-a[target="_blank"]:hover {
-    text-decoration: underline;
-}
-
-a[href^="mailto:"] {
-    color: var(--color-texto-secundario);
-    border-bottom: 1px dashed var(--color-primario);
-    text-decoration: none;
-}
-
-/* Clases */
-.contenedor {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--espacio-seccion) 5%;
-}
-
-/* Rejilla de 4 columnas para los 8 proyectos (2 filas de 4) */
-.grid-proyectos, .grid-habilidades {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-}
-
-/* Hero y Sobre mí en 2 columnas */
-#hero, #sobre-mi, .grid-contacto {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
-}
-
-.btn-primario, .btn-filtro.activo {
-    background-color: var(--color-primario);
-    color: #FFFFFF;
-}
-
-.btn-secundario {
-    background-color: transparent;
-    color: var(--color-primario);
-}
-
-/* Formulario */
-.campo-formulario {
-    margin-bottom: 15px;
-}
-
-.campo-formulario label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-
-.campo-formulario input,
-.campo-formulario textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid var(--color-borde);
-    border-radius: var(--radio-borde);
-}
-
-.lista-formacion {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.lista-formacion h3 {
-    margin-bottom: 8px;
-}
-
-.etiqueta-destacada {
-    display: inline-block;
-    color: var(--color-primario);
-    font-weight: 700;
-    margin-bottom: 10px;
-}
-
-.btn-primario {
-    border: 0;
-    border-radius: var(--radio-borde);
-    padding: 12px 20px;
-    cursor: pointer;
-    font: inherit;
-    font-weight: 700;
-}
-
-.enlaces-sociales {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+figcaption {
+    font-size: 14px;
+    color: #777777;
     margin-top: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.enlaces-sociales a {
-    color: var(--color-primario);
-    font-weight: 600;
-    text-decoration: none;
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    border-top: 1px solid #e0e0e0;
+    background-color: #f4f4f4;
+    color: #777777;
+    font-size: 14px;
 }
 
-@media (max-width: 900px) {
-    #cabecera-principal {
-        flex-direction: column;
-        gap: 15px;
-    }
+/* Con ia */
 
-    .grid-proyectos,
-    .grid-habilidades {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    #hero,
-    #sobre-mi,
-    .grid-contacto {
-        grid-template-columns: 1fr;
-    }
-
-    .lista-formacion {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (max-width: 520px) {
-    .menu-nav > ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px 18px;
-    }
-
-    .grid-proyectos,
-    .grid-habilidades {
-        grid-template-columns: 1fr;
-    }
+header nav ul li a.activo {
+    color: #2980b9;
+    border-bottom: 2px solid #2980b9;
+    padding-bottom: 4px;
 }
